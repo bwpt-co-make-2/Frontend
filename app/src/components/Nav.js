@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
 const NavStrap = props => {
@@ -9,19 +9,13 @@ const NavStrap = props => {
         <NavbarBrand href="/">Co-Make</NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <NavLink>
-              <Link to="/signup">Sign Up</Link>
-            </NavLink>
+            <Link to="/signup" className="nav-link">Sign Up</Link>
           </NavItem>
           <NavItem>
-            <NavLink>
-              <Link to="/signin">Sign in</Link>
-            </NavLink>
+            <Link to="/signin" className="nav-link">Sign in</Link>
           </NavItem>
           <NavItem>
-            <NavLink>
-              <Link to="/issues">Issues</Link>
-            </NavLink>
+            <Link to="/issues" className="nav-link">Issues</Link>
           </NavItem>
         </Nav>
       </Navbar>

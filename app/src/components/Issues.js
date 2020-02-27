@@ -1,8 +1,17 @@
 import React from 'react';
+import IssueCard from './IssueCard'
+import dummydata from '../dummydata'
 
 const Issues = props => {
   return (
-    <h1>Issues</h1>
+    <div className="issuesDiv">
+      <h1 className="pagetitle">Issues</h1>
+      <div className="issuesContainer">
+        {dummydata.map(element => {
+          return <IssueCard issue={element} key={Math.random()}/>
+        })}
+      </div>
+    </div>
   )
 }
 
