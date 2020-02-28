@@ -5,13 +5,17 @@ import {
 } from 'reactstrap';
 
 const IssueCard = props => {
+  const upvote = () => {
+    //here is where you could tell the backend to increment the issue votes
+  }
+
   return (
     <Card>
       <CardImg top width="100%" src={props.issue.img} alt="Image of issue" />
       <CardBody>
         <CardTitle>{props.issue.title}</CardTitle>
         <CardText>{props.issue.description}</CardText>
-        <Button>Upvote</Button>
+        <Button onClick={upvote}>Upvote</Button>
       </CardBody>
     </Card>
   )
