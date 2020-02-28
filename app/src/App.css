@@ -56,4 +56,21 @@
   display: flex;
   justify-content: center;
   max-width: 80%;
+  flex-wrap: wrap;
+}
+
+.search-div {
+  padding-bottom: 2rem;
+}
+
+.create-issue-form {
+  min-width: 20rem;
+}
+
+.card {
+  margin: .5rem;
+}
+.card img {
+  width: 25rem;
+  height: 15rem;
 }
