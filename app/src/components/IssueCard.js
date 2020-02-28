@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, Button
+  CardTitle, Badge, Button, CardFooter
 } from 'reactstrap';
 
 const IssueCard = props => {
@@ -15,8 +15,12 @@ const IssueCard = props => {
       <CardBody>
         <CardTitle>{props.issue.title}</CardTitle>
         <CardText>{props.issue.description}</CardText>
-        <Button onClick={upvote}>Upvote</Button>
+        <Button color="primary" onClick={upvote}>
+          <Badge >{props.issue.upvotes} </Badge> Upvotes
+        </Button>
+        
       </CardBody>
+      <CardFooter className="text-muted">Zipcode: {props.issue.zipcode}</CardFooter>
     </Card>
   )
 }
