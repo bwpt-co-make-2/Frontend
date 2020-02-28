@@ -17,6 +17,9 @@ const NavStrap = props => {
           <NavItem>
             <Link to="/issues" className="nav-link">Issues</Link>
           </NavItem>
+          <NavItem>
+            <Link to="/createissue" className="nav-link">Create an Issue</Link>
+          </NavItem>
         </Nav>
       </Navbar>
     </div>

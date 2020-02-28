@@ -61,3 +61,7 @@
 .search-div {
   padding-bottom: 2rem;
 }
+
+.create-issue-form {
+  min-width: 20rem;
+}
