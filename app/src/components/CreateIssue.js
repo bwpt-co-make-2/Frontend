@@ -18,6 +18,8 @@ const CreateIssue = props => {
           initialValues={{
             title: '',
             description: '',
+            zipcode: '',
+            imageurl: ''
           }}
           onSubmit={(values, tools) => {
             tools.resetForm();
@@ -43,7 +45,7 @@ const CreateIssue = props => {
               </FormGroup>
               <FormGroup>
                 <Label for="description">Description of issue:</Label>
-                <Input type="textarea" name="description" id="description"/>
+                <Field as='textarea' name="description" id="description" className="form-control"/>
                 <ErrorMessage name="description" />
               </FormGroup>
               <FormGroup>
