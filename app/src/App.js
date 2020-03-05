@@ -6,6 +6,8 @@ import Signin from './components/Signin'
 import Issues from './components/Issues'
 import NavStrap from './components/Nav'
 import CreateIssue from './components/CreateIssue';
+import IssueView from './components/IssueView';
+import dummydata from './dummydata'
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
       <NavStrap />
       <Route path='/signup' component={Signup}/>
       <Route path='/signin' component={Signin}/>
-      <Route path='/issues' component={Issues}/>
+      <Route exact path='/issues' component={Issues}/>
+      <Route path='/issues/:id' render={() => 
+        <IssueView issues={dummydata}/>
+      }/>
       <Route path='/createissue' component={CreateIssue}/>
     </div>
   );

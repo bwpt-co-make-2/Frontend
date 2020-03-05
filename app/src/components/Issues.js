@@ -18,7 +18,7 @@ const Issues = props => {
       <Searchbar sortedIssues={sortedIssues} setFilteredIssues={setFilteredIssues}/>
       <div className="issuesContainer">
         {filteredIssues.map(element => {
-          return <IssueCard issue={element} key={Math.random()}/>
+          return <IssueCard issue={element} key={element.id}/>
         })}
       </div>
     </div>

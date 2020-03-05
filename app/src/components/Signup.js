@@ -21,6 +21,7 @@ const Signup = props => {
           onSubmit={(values, tools) => {
             tools.resetForm();
             console.log(values);
+            Axios.post("https://thatcher-comake.herokuapp.com/register",values)
           }}
           validationSchema={Yup.object().shape({
             name: Yup.string()
