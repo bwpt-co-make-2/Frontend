@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, Badge, Button, CardFooter
@@ -11,7 +12,9 @@ const IssueCard = props => {
 
   return (
     <Card>
-      <CardImg top width="100%" src={props.issue.img} alt="Image of issue" />
+      <Link to={`/issues/${props.issue.id}`}>
+        <CardImg top width="100%" src={props.issue.picture} alt="Image of issue" />
+      </Link>
       <CardBody>
         <CardTitle>{props.issue.title}</CardTitle>
         <CardText>{props.issue.description}</CardText>
