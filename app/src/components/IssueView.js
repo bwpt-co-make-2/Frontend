@@ -10,8 +10,9 @@ const IssueView = props => {
     //here is where you could tell the backend to increment the issue votes
   }
   const params = useParams();
-  const issue = props.issues.find(element => element.id == params.id)
-
+  const [ issue ] = useState(props.issues.find(element => element.id == params.id))
+  
+  console.log(props)
   return (
     <div className='issueViewDiv'>
       <Card className='issueView'>
