@@ -33,7 +33,7 @@ const CreateIssue = props => {
               .required("Required"),
             zipcode: Yup.string()
               .required("Required")
-              .length(5)
+              .matches(/^\d{5}(-\d{4})?$/, "Must be valid zipcode")
               
           })}
         >
