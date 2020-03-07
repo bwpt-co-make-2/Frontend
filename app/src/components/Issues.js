@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import IssueCard from './IssueCard'
 import dummydata from '../dummydata'
 import Searchbar from './Searchbar';
+import Axios from 'axios';
 
 const Issues = props => {
   const [sortedIssues, setSortedIssues] = useState([])
@@ -10,6 +11,10 @@ const Issues = props => {
   useEffect(() => {
     setSortedIssues(dummydata.sort((a, b) => b.upvotes - a.upvotes)); //axios request would go here
     setFilteredIssues(dummydata);
+    Axios.get("https://thatcher-comake.herokuapp.com/issues")
+      .then((response) => {
+        console.log(response)
+      })
   }, [])
 
   return (
