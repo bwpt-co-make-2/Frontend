@@ -5,18 +5,30 @@ import Searchbar from './Searchbar';
 import Axios from 'axios';
 
 const Issues = props => {
-  const [sortedIssues, setSortedIssues] = useState([])
+  console.log(props)
+  const [sortedIssues, setSortedIssues] = useState(props.sortedIssues)
+  const [ filteredIssues, setFilteredIssues ] = useState(props.filteredIssues)
+  /* const [sortedIssues, setSortedIssues] = useState([])
   const [filteredIssues, setFilteredIssues] = useState([])
+  
 
   useEffect(() => {
-    setSortedIssues(dummydata.sort((a, b) => b.upvotes - a.upvotes)); //axios request would go here
-    setFilteredIssues(dummydata);
-    Axios.get("https://thatcher-comake.herokuapp.com/issues")
-      .then((response) => {
-        console.log(response)
-      })
-  }, [])
+    let newdata = [];
 
+    Axios.get("https://cors-anywhere.herokuapp.com/https://thatcher-comake.herokuapp.com/issues")
+      .then((response) => {
+        console.log(response.data)
+        response.data.forEach((element, index)=> {
+          element.id = dummydata.length + index + 1;
+          element.zipcode = element.zipcode.toString();
+        })
+        newdata = dummydata.concat(response.data)
+        setSortedIssues(newdata.sort((a, b) => b.upvotes - a.upvotes));
+        setFilteredIssues(newdata);
+      })
+    
+  }, [])
+ */
   return (
     <div className="issuesDiv">
       <h1 className="pagetitle">Issues</h1>
